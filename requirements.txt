@@ -1,0 +1,6 @@
+flask
+werkzeug
+requests
+beautifulsoup4
+lxml
+

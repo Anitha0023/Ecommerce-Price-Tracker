@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Comparison</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="title">Price Comparison Application</h1>
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form action="/project" method="POST" enctype="multipart/form-data" class="upload-box">
+        <label class="upload-label">Upload Product Image:</label>
+        <input type="file" name="photo" accept="image/*" required>
+        <button type="submit" class="btn">Compare Prices</button>
+    </form>
+
+    {% if uploaded %}
+    <div class="image-section">
+        <h2>Uploaded Image</h2>
+        <img src="{{ uploaded }}" alt="Uploaded Product" class="uploaded-img">
+    </div>
+    {% endif %}
+
+    {% if product %}
+    <div class="result-section">
+
+        <h2>Detected Product: {{ product.name }}</h2>
+
+        <table class="price-table">
+            <tr>
+                <th>Store</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Amazon</td>
+                <td>{{ product.amazon }}</td>
+            </tr>
+            <tr>
+                <td>Flipkart</td>
+                <td>{{ product.flipkart }}</td>
+            </tr>
+            <tr>
+                <td>Walmart</td>
+                <td>{{ product.walmart }}</td>
+            </tr>
+        </table>
+
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,582 @@
+/* register.html */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 350px;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* INPUT FIELD STYLES */
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Style for all Left-side Icons (Name, E-mail, Password, Confirm Password) */
+.icon-inside {
+    position: absolute;
+    left: 15px; /* Position on the left inside the input area */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #999;
+    pointer-events: none;
+}
+
+/* Styling for all input fields */
+input {
+    width: 100%;
+    box-sizing: border-box;
+    /* IMPORTANT CHANGE: Increased right padding to 45px to prevent text overlap with the right toggle icon */
+    padding: 15px 45px 15px 45px; 
+    margin: 0;
+    border-radius: 5px; 
+    border: 1px solid #ccc;
+    text-align: left; 
+    font-size: 1em;
+    height: 50px;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+/* Styling for the password show/hide button (Right-side Icon) */
+.password-toggle {
+    position: absolute;
+    right: 15px; /* Position on the right inside the input area */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+}
+
+
+/* BUTTON STYLES */
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+button, .btn {
+    width: 48%; 
+    margin: 0; 
+    padding: 12px; 
+    border-radius: 8px; 
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* SIGN UP Button (Primary) */
+.btn-signup {
+    background: #4f46e5;
+    color: white;
+    border: none;
+   
+  
+}
+
+.btn-signup:hover {
+    background: #3730a3;
+   
+}
+
+/* SIGN IN Button (Secondary) */
+.btn-signin {
+    background: white;
+    color: #4f46e5;
+    border: 1px solid #4f46e5;
+   
+   
+}
+
+.btn-signin:hover {
+    background: #f3f4f6;
+    color: #3730a3;
+    border-color: #3730a3;
+    
+}
+
+.error {
+    color: red;
+    margin: 10px 0;
+    text-align: left;
+}
+/* register.html */
+
+
+/* login.html */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 350px;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* INPUT FIELD STYLES */
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Style for all Left-side Icons */
+.icon-inside {
+    position: absolute;
+    left: 15px; /* Position on the left inside the input area */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #999;
+    pointer-events: none;
+}
+
+/* Styling for all input fields */
+input {
+    width: 100%;
+    box-sizing: border-box;
+    /* Left padding (45px) for the icon, Right padding (45px) for the password toggle */
+    padding: 15px 45px 15px 45px; 
+    margin: 0;
+    border-radius: 5px; 
+    border: 1px solid #ccc;
+    text-align: left; 
+    font-size: 1em;
+    height: 50px;
+}
+
+input[name="username"] {
+    /* Adjust right padding for username since it doesn't have a right icon */
+    padding-right: 15px;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+/* Styling for the password show/hide button (Right-side Icon) */
+.password-toggle {
+    position: absolute;
+    right: 15px; /* Position on the right inside the input area */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+}
+
+
+/* BUTTON STYLES */
+
+button, .btn {
+    display: block;
+    width: 100%; 
+    margin: 30px 0 20px 0; /* Margin above and below the button */
+    padding: 12px; 
+    border-radius: 8px; 
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Default style for buttons, adjusted below for Login */
+    border: none;
+}
+
+/* Login Button (Specific style based on your color choice) */
+
+.btn-login {
+    /* Updated styles for the outlined button appearance */
+    background: #4f46e5;
+    color:  white;
+    border: 1px solid #4f46e5;
+    
+    /* Removed box-shadow to match the typical outlined style */
+    box-shadow: none; 
+}
+
+/* Update the hover state to keep the button interactive */
+.btn-login:hover {
+    background: #f3f4f6; /* Light gray background on hover */
+    color: #3730a3; /* Darker blue text on hover */
+    border-color: #3730a3; /* Darker blue border on hover */
+}
+
+
+
+/* Link Style */
+.signup-link {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.signup-link a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    margin: 10px 0;
+    text-align: left;
+}
+/* login.html */   
+
+
+/* home.html*/
+/* Basic Reset and Body Styling */
+
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Light grey/off-white background */
+    display: flex;
+    justify-content: center; /* Center the card horizontally */
+    align-items: center; /* Center the card vertically */
+    min-height: 100vh;
+    margin: 0;
+
+    /* Adding a light background image */
+
+    background-image: url('https://i.imgur.com/your-light-background-image.png'); /* Replace with your actual image URL */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed; /* Keep background fixed when scrolling */
+
+}
+
+
+
+/* Card Container Styling */
+
+.card {
+
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle 3D effect */
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+
+}
+
+
+
+/* Title and Text Styling */
+
+.card-title {
+
+    font-size: 2.5em;
+    color: #333333;
+    margin-bottom: 5px;
+
+}
+
+
+
+.subtitle {
+
+    font-size: 1.5em;
+    color: #007bff; /* Primary blue for the main service name */
+    margin-top: 0;
+    margin-bottom: 20px;
+
+}
+
+
+
+.tagline {
+
+    font-size: 1.1em;
+    color: #6c757d; /* Muted color for the tagline */
+    margin-bottom: 30px;
+    font-style: italic;
+
+}
+
+
+
+
+
+/* Button Styling */
+
+.btn {
+
+    display: block; /* Changed to block to stack vertically */
+    padding: 12px 25px;
+    margin: 10px auto; /* Center buttons horizontally and add vertical margin */
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    border: none;
+    cursor: pointer;
+    width: 80%; /* Make buttons take up more width */
+    max-width: 300px; /* Limit max width for larger screens */
+
+}
+
+
+
+/* Primary Button (Go to Project) */
+
+.btn:not(.danger) {
+
+    background-color: #007bff;
+    color: #ffffff;
+
+}
+
+
+
+.btn:not(.danger):hover {
+
+    background-color: #0056b3;
+    transform: translateY(-2px);
+
+}
+
+
+
+/* Danger Button (Logout) */
+
+.btn.danger {
+
+    background-color: #dc3545;
+    color: #ffffff;
+
+}
+
+
+
+.btn.danger:hover {
+
+    background-color: #c82333;
+    transform: translateY(-2px);
+
+}
+
+
+
+/* home.html*/
+
+/* project.html */
+
+body {
+    font-family: Arial;
+    background: #eef1f7;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+}
+
+.card-title {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #4A6CF7;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: #3d5fe6;
+}
+
+.input-file {
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.uploaded-img {
+    width: 180px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.price-table th,
+.price-table td {
+    border: 1px solid #bbb;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+/* project.html */
+
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f7fa;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: #4a90e2;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Upload Section */
+.upload-section {
+    width: 450px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.upload-section h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.upload-section input[type="file"] {
+    margin: 10px 0;
+}
+
+.btn-primary {
+    background: #4a90e2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background: #357ac9;
+}
+
+/* Uploaded Image */
+.preview img {
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+/* Comparison Section */
+.result-card {
+    width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.result-card h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.price-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 18px;
+    background: #f4f7fa;
+    margin: 8px 0;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    color: #777;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+/* project.html */

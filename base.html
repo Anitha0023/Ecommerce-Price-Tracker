@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{% block title %}Price Compare{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app-screen">
+    <header class="header">
+      <h1>{% block header %}Price Compare{% endblock %}</h1>
+    </header>
+
+    <main class="form-container">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div style="margin-bottom:12px;">
+            {% for category, msg in messages %}
+              <div style="padding:8px; border-radius:8px; margin-bottom:6px; background:#fff;">
+                <strong>{{ category|capitalize }}:</strong> {{ msg }}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      {% block content %}{% endblock %}
+    </main>
+
+    <nav class="footer-nav">
+      <ul>
+        <li><span class="nav-icon">🏠</span> Home</li>
+        <li><span class="nav-icon">📊</span> Compare</li>
+        <li><span class="nav-icon">👤</span> Profile</li>
+        <li><span class="nav-icon">📄</span> Permits</li>
+        <li><span class="nav-icon">✉️</span> Sent</li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>
